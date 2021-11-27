@@ -1,0 +1,11 @@
+@mixin for-600-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-830-up {
+  @media (min-width: 830px) {
+    @content;
+  }
+}
