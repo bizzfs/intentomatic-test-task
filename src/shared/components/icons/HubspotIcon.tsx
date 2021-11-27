@@ -1,6 +1,6 @@
-import { BaseComponentsProps } from 'shared/types';
+import { BaseComponentProps } from '@shared/types';
 
-export const HubspotIcon = ({ className }: BaseComponentsProps) => (
+export const HubspotIcon = ({ className }: BaseComponentProps) => (
   <svg className={className} width="45" height="45">
     <image
       width="45"

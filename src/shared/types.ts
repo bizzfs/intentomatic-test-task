@@ -1,5 +1,9 @@
 import { ReactNode } from 'react';
 
-export type BaseComponentsProps = {
+export type BaseComponentProps = {
   className?: string;
+};
+
+export type BaseProviderProps = {
+  children: ReactNode;
 };

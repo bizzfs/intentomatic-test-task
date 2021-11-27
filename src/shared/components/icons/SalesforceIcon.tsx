@@ -1,6 +1,6 @@
-import { BaseComponentsProps } from 'shared/types';
+import { BaseComponentProps } from '@shared/types';
 
-export const SalesforceIcon = ({ className }: BaseComponentsProps) => (
+export const SalesforceIcon = ({ className }: BaseComponentProps) => (
   <svg className={className} width="45" height="45" viewBox="0 0 45 45">
     <image
       id="image0_10_112"

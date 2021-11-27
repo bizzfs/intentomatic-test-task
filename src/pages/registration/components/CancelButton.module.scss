@@ -1,0 +1,15 @@
+.cancelButton {
+  padding: 10px 40px;
+  background: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #121212;
+  border: none;
+  border-radius: 8px;
+  text-decoration: underline;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -4,8 +4,8 @@
   }
 }
 
-@mixin for-830-up {
-  @media (min-width: 830px) {
+@mixin for-768-up {
+  @media (min-width: 768px) {
     @content;
   }
 }

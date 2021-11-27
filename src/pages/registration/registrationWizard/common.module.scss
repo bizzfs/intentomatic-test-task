@@ -21,6 +21,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    overflow: auto;
 
     .logo {
       margin-bottom: 32px;
@@ -38,6 +39,18 @@
         width: 100%;
         min-height: 60px;
         margin-bottom: 32px;
+
+        &.invalid {
+          border: 1px solid #cc0000;
+
+          > legend {
+            color: #cc0000;
+          }
+
+          > input {
+            color: #cc0000;
+          }
+        }
 
         > legend {
           font-size: 15px;
@@ -57,29 +70,13 @@
           }
         }
       }
-
-      .submitButton {
-        padding: 15px 40px;
-        background: #b9b9b9;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 27px;
-        color: #ffffff;
-        border: none;
-        border-radius: 8px;
-      }
     }
   }
 }
 
-.footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 163px;
-
-  background: #ffffff;
-  border-top: 1px solid rgba(190, 190, 190, 0.5);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+.submitButton {
+  padding: 15px 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
 }

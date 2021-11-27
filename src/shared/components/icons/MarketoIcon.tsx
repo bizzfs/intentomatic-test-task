@@ -1,6 +1,6 @@
-import { BaseComponentsProps } from 'shared/types';
+import { BaseComponentProps } from '@shared/types';
 
-export const MarketoIcon = ({ className }: BaseComponentsProps) => (
+export const MarketoIcon = ({ className }: BaseComponentProps) => (
   <svg className={className} width="45" height="45" viewBox="0 0 45 45">
     <image
       width="61"

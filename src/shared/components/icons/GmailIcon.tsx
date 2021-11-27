@@ -1,6 +1,6 @@
-import { BaseComponentsProps } from 'shared/types';
+import { BaseComponentProps } from '@shared/types';
 
-export const GmailIcon = ({ className }: BaseComponentsProps) => (
+export const GmailIcon = ({ className }: BaseComponentProps) => (
   <svg className={className} width="45" height="45" viewBox="0 0 45 45">
     <image
       width="43"

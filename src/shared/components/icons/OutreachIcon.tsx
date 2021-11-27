@@ -1,7 +1,7 @@
-import { BaseComponentsProps } from 'shared/types';
+import { BaseComponentProps } from '@shared/types';
 
-export const OutreachIcon = ({ className }: BaseComponentsProps) => (
-  <svg width="45" height="45" viewBox="0 0 45 45">
+export const OutreachIcon = ({ className }: BaseComponentProps) => (
+  <svg className={className} width="45" height="45" viewBox="0 0 45 45">
     <image
       width="43"
       height="43"

@@ -1,6 +1,6 @@
-import type { BaseComponentsProps } from 'shared/types';
+import type { BaseComponentProps } from '@shared/types';
 
-export const IntentomaticLogo = ({ className }: BaseComponentsProps) => {
+export const IntentomaticLogo = ({ className }: BaseComponentProps) => {
   return (
     <svg className={className} width="344" height="52" fill="none">
       <path fill="url(#a)" d="M0 0h344v52H0z" />

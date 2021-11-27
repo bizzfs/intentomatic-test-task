@@ -1,0 +1,14 @@
+.submitButton {
+  padding: 10px 40px;
+  background: #b9b9b9;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
