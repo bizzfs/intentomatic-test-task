@@ -1,6 +1,6 @@
 import { Tool } from '@pages/registration/contexts/registrationWizardContext';
 
-type ToolActions =
+type ToolAction =
   | {
       type: 'toggleTool';
       tool: Tool;
@@ -10,8 +10,8 @@ type ToolActions =
       term: string;
     };
 
-export const toggleTool = (tool: Tool) => ({ type: 'toggleTool', tool });
-export const setSearchTerm = (term: 'string') => ({ type: 'setSearchTerm', term });
+export const toggleToolAction = (tool: Tool): ToolAction => ({ type: 'toggleTool', tool });
+export const setSearchTermAction = (term: string): ToolAction => ({ type: 'setSearchTerm', term });
 
 type ToolsState = {
   searchTerm: string;
@@ -37,7 +37,7 @@ const toolsFilterFunc = (searchTerm: string) => {
   return (tool: Tool) => tool.toLowerCase().includes(searchTermNormalized);
 };
 
-export const toolsReducer = (state = toolsInitialState, action: ToolActions) => {
+export const toolsReducer = (state = toolsInitialState, action: ToolAction) => {
   switch (action.type) {
     case 'toggleTool': {
       const { tool } = action;

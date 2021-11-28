@@ -5,14 +5,19 @@ import classNames from 'classnames';
 import { SubmitButton } from '@pages/registration/components/SubmitButton';
 import { ToolRenderer } from '@pages/registration/components/ToolRenderer';
 import { useRegistrationWizardDispatch } from '@pages/registration/contexts/registrationWizardContext';
-import { toolsInitialState, toolsReducer } from '@pages/registration/registrationWizard/stepTwo/toolsReducer';
+import {
+  setSearchTermAction,
+  toolsInitialState,
+  toolsReducer,
+  toggleToolAction,
+} from '@pages/registration/registrationWizard/stepTwo/toolsReducer';
 import { BaseComponentProps } from '@shared/types';
 
 import commonStyles from '../common.module.scss';
 import styles from './index.module.scss';
 
 export const StepTwo = ({ className }: BaseComponentProps) => {
-  const [toolsState, toggleTool] = useReducer(toolsReducer, toolsInitialState);
+  const [toolsState, toolsDispatch] = useReducer(toolsReducer, toolsInitialState);
   const { setData, openConfirmationModal } = useRegistrationWizardDispatch();
   const handleSaveClick = () => {
     setData({ tools: [...toolsState.selected] });
@@ -22,10 +27,7 @@ export const StepTwo = ({ className }: BaseComponentProps) => {
     <form className={classNames(className, styles.form)}>
       <div className={styles.header}>What marketing and sales tools do you use?</div>
       <fieldset className={classNames(commonStyles.formGroup, styles.searchInputFormGroup)}>
-        <input
-          placeholder="Search"
-          onChange={(event) => toggleTool({ type: 'setSearchTerm', term: event.target.value })}
-        />
+        <input placeholder="Search" onChange={(event) => toolsDispatch(setSearchTermAction(event.target.value))} />
       </fieldset>
       <div className={styles.toolsFormGroup}>
         <div className={styles.toolsLabel}>Selected</div>
@@ -35,7 +37,7 @@ export const StepTwo = ({ className }: BaseComponentProps) => {
               key={tool}
               className={classNames(styles.tool, styles.toolSelected)}
               tool={tool}
-              onClick={() => toggleTool({ type: 'toggleTool', tool })}
+              onClick={() => toolsDispatch(toggleToolAction(tool))}
             />
           ))}
           <div className={styles.toolPlaceholder} />
@@ -51,7 +53,7 @@ export const StepTwo = ({ className }: BaseComponentProps) => {
               key={tool}
               className={styles.tool}
               tool={tool}
-              onClick={() => toggleTool({ type: 'toggleTool', tool })}
+              onClick={() => toolsDispatch(toggleToolAction(tool))}
             />
           ))}
           <div className={styles.toolPlaceholder} />
