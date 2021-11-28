@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
 
-import { Team } from '@pages/registration/contexts/registrationWizardContext';
+import { Team } from '../../contexts/registrationWizardContext';
 
 export type FormValue = {
   name: string;

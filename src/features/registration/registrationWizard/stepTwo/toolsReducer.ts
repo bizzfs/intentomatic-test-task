@@ -1,4 +1,4 @@
-import { Tool } from '@pages/registration/contexts/registrationWizardContext';
+import { Tool } from '../../contexts/registrationWizardContext';
 
 type ToolAction =
   | {

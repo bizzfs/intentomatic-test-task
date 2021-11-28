@@ -3,14 +3,14 @@ import { memo } from 'react';
 import classNames from 'classnames';
 import Modal from 'react-modal';
 
-import { CancelButton } from '@pages/registration/components/CancelButton';
-import { SubmitButton } from '@pages/registration/components/SubmitButton';
-import { TeamRenderer } from '@pages/registration/components/TeamRenderer';
-import { ToolRenderer } from '@pages/registration/components/ToolRenderer';
-import { RegistrationData } from '@pages/registration/contexts/registrationWizardContext';
 import { BaseComponentProps } from '@shared/types';
 
+import { RegistrationData } from '../contexts/registrationWizardContext';
+import { CancelButton } from './CancelButton';
 import styles from './ConfirmationModal.module.scss';
+import { SubmitButton } from './SubmitButton';
+import { TeamRenderer } from './TeamRenderer';
+import { ToolRenderer } from './ToolRenderer';
 
 type Props = BaseComponentProps & {
   isOpen: boolean;

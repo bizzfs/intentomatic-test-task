@@ -2,19 +2,14 @@ import { memo, useReducer } from 'react';
 
 import classNames from 'classnames';
 
-import { SubmitButton } from '@pages/registration/components/SubmitButton';
-import { ToolRenderer } from '@pages/registration/components/ToolRenderer';
-import { useRegistrationWizardDispatch } from '@pages/registration/contexts/registrationWizardContext';
-import {
-  setSearchTermAction,
-  toolsInitialState,
-  toolsReducer,
-  toggleToolAction,
-} from '@pages/registration/registrationWizard/stepTwo/toolsReducer';
 import { BaseComponentProps } from '@shared/types';
 
+import { SubmitButton } from '../../components/SubmitButton';
+import { ToolRenderer } from '../../components/ToolRenderer';
+import { useRegistrationWizardDispatch } from '../../contexts/registrationWizardContext';
 import commonStyles from '../common.module.scss';
 import styles from './index.module.scss';
+import { setSearchTermAction, toolsInitialState, toolsReducer, toggleToolAction } from './toolsReducer';
 
 export const StepTwo = ({ className }: BaseComponentProps) => {
   const [toolsState, toolsDispatch] = useReducer(toolsReducer, toolsInitialState);

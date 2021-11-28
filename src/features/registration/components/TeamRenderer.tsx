@@ -1,10 +1,11 @@
-import { Card } from '@pages/registration/components/Card';
-import { Team } from '@pages/registration/contexts/registrationWizardContext';
 import { FounderIcon } from '@shared/components/icons/FounderIcon';
 import { MarketingIcon } from '@shared/components/icons/MarketingIcon';
 import { OtherIcon } from '@shared/components/icons/OtherIcon';
 import { SalesIcon } from '@shared/components/icons/SalesIcon';
 import { BaseComponentProps } from '@shared/types';
+
+import { Team } from '../contexts/registrationWizardContext';
+import { Card } from './Card';
 
 const teamRendererMap = {
   [Team.SALES]: ({ className }: BaseComponentProps) => <Card className={className} icon={SalesIcon} title="Sales" />,

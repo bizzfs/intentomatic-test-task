@@ -4,16 +4,16 @@ import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 import classNames from 'classnames';
 import { Controller, useForm } from 'react-hook-form';
 
-import { SubmitButton } from '@pages/registration/components/SubmitButton';
-import { Team, useRegistrationWizardDispatch } from '@pages/registration/contexts/registrationWizardContext';
-import commonStyles from '@pages/registration/registrationWizard/common.module.scss';
-import { formInitialValue, formValidationSchema, FormValue } from '@pages/registration/registrationWizard/stepOne/form';
 import { FounderIcon } from '@shared/components/icons/FounderIcon';
 import { MarketingIcon } from '@shared/components/icons/MarketingIcon';
 import { OtherIcon } from '@shared/components/icons/OtherIcon';
 import { SalesIcon } from '@shared/components/icons/SalesIcon';
 import { BaseComponentProps } from '@shared/types';
 
+import { SubmitButton } from '../../components/SubmitButton';
+import { Team, useRegistrationWizardDispatch } from '../../contexts/registrationWizardContext';
+import commonStyles from '../common.module.scss';
+import { formInitialValue, formValidationSchema, FormValue } from './form';
 import styles from './index.module.scss';
 
 export const StepOne = ({ className }: BaseComponentProps) => {

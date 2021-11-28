@@ -1,13 +1,14 @@
 import { MouseEventHandler } from 'react';
 
-import { Card } from '@pages/registration/components/Card';
-import { Tool } from '@pages/registration/contexts/registrationWizardContext';
 import { GmailIcon } from '@shared/components/icons/GmailIcon';
 import { HubspotIcon } from '@shared/components/icons/HubspotIcon';
 import { MarketoIcon } from '@shared/components/icons/MarketoIcon';
 import { OutreachIcon } from '@shared/components/icons/OutreachIcon';
 import { SalesforceIcon } from '@shared/components/icons/SalesforceIcon';
 import { BaseComponentProps } from '@shared/types';
+
+import { Tool } from '../contexts/registrationWizardContext';
+import { Card } from './Card';
 
 type ToolRendererMapProps = BaseComponentProps & {
   onClick?: MouseEventHandler;
